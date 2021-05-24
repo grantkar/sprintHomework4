@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<div>
+    <body>
+    <form action="#" th:action="@{/processForm}" th:object="${product}" method="post">
+        <p>Id: <input type="text" th:field="*{product.id}"/></p>
+        <p>Title product: <input type="text" th:field="*{product.title}"/></p>
+        <p>Cost product: <input type="text" th:field="*{product.cost}"/></p>
+        <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+    </form>
+    </body>
+
+</div>
+
+</html>
