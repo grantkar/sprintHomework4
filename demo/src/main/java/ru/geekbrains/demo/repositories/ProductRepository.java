@@ -12,10 +12,10 @@ import java.util.List;
 public class ProductRepository {
     List<Product> products = new ArrayList<Product>();
 
-    public ProductRepository() {
-        products.add(new Product(0, "Шуруповерт", 5000));
-        products.add(new Product(1, "Перфоратор", 10000));
-    }
+//    public ProductRepository() {
+//        products.add(new Product(0, "Шуруповерт", 5000));
+//        products.add(new Product(1, "Перфоратор", 10000));
+//    }
 
     public Product setProduct(int id, String title, int cost) {
 

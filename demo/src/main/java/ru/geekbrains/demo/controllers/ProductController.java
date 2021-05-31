@@ -54,5 +54,35 @@ public class ProductController {
         model.addAttribute("allProducts",allProducts);
         return "all-product";
     }
+//    @RequestMapping(value = "/allProductMin", method = RequestMethod.GET)
+//    public String showAllProductMin(Model model) {
+//        List<Product> allProductsMin = productService.getMinCostProduct();
+//        model.addAttribute("allProductsMin",allProductsMin);
+//        return "allProductMin";
+//    }
+
+    @RequestMapping(value = "/minCost", method = RequestMethod.GET)
+    private String showMinProduct(Model model){
+        Product product = productService.getMinCost();
+        model.addAttribute("product", product);
+        return "product";
+    }
+
+    @RequestMapping(value = "/maxCost", method = RequestMethod.GET)
+    private String showMaxProduct(Model model){
+        Product product = productService.getMaxCost();
+        model.addAttribute("product", product);
+        return "product";
+    }
+
+    @RequestMapping(value = "/minAndMax", method = RequestMethod.GET)
+    private String showMinAndMaxProduct(Model model){
+        Product productMin = productService.getMinCost();
+        model.addAttribute("productMin", productMin);
+        Product productMax = productService.getMaxCost();
+        model.addAttribute("productMax", productMax);
+        return "min-max";
+    }
+
 }
 
